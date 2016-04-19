@@ -1,9 +1,6 @@
 FROM node:0.12.13
 
-USER root
-
-RUN mkdir -p /root/.node-gyp/0.12.13
-RUN npm install pomelo -g
+RUN npm install pomelo -g --unsafe-perm
 
 EXPOSE 3001
 EXPOSE 3002
