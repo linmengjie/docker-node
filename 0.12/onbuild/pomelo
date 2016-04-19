@@ -1,9 +1,7 @@
 FROM node:0.12.13
 
-RUN mkdir -p /usr/src && cd /usr/src/
-RUN git clone https://github.com/NetEase/pomelo.git
-RUN cd /usr/src/pomelo 
-RUN ls -l
+RUN mkdir -p /usr/src && cd /usr/src/ && git clone https://github.com/NetEase/pomelo.git
+RUN cd /usr/src/pomelo/ && ls -l
 RUN npm install -g
 
 EXPOSE 3001
