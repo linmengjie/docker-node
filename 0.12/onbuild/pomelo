@@ -1,8 +1,7 @@
 FROM node:0.12.13
 
-RUN mkdir -p /usr/src
+RUN mkdir -p /usr/src && cd /usr/src/
 RUN git clone https://github.com/NetEase/pomelo.git
-WORKDIR /usr/src/pomelo
 RUN ls -l
 RUN cd /usr/src/pomelo && npm install -g
 
