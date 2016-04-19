@@ -1,12 +1,14 @@
 FROM node:0.12.13
 
+USER root
+
+RUN mkdir -p /root/.node-gyp/0.12.13
 RUN npm install pomelo -g
 
-RUN mkdir -p /usr/src/app
-WORKDIR /usr/src/app
-
-ONBUILD COPY package.json /usr/src/app/
-ONBUILD RUN npm install
-ONBUILD COPY . /usr/src/app
+EXPOSE 3001
+EXPOSE 3002
+EXPOSE 3005
+EXPOSE 3150
+EXPOSE 8080
 
 CMD [ "npm", "start" ]
