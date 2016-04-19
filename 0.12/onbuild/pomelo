@@ -1,13 +1,7 @@
 FROM node:0.12.13
 
 RUN mkdir -p /usr/src && cd /usr/src/ && git clone https://github.com/NetEase/pomelo.git
-RUN cd /usr/src/pomelo/ && ls -l
-RUN npm install -g
 
-EXPOSE 3001
-EXPOSE 3002
-EXPOSE 3005
-EXPOSE 3150
-EXPOSE 8080
+EXPOSE 3001 3002 3005 3010 3150 8000 8080
 
 CMD [ "npm", "start" ]
